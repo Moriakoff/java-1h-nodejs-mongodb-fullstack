@@ -1,0 +1,32 @@
+function(requestBody) {
+
+	let firstName = requestBody.firstName; //John', 'Doe'); DROP TABLE USERS; #
+	let lastName = requestBody.lastName;   //Doe
+
+	let query = "INSERT INTO USERS (FIRST_NAME, LAST_NAME) VALUES ('@firstName', '@lastName')";
+				 
+				 
+	//INSERT INTO USERS (FIRST_NAME, LAST_NAME) VALUES ('John', 'Doe'); SHOW TABLES; #', 'Doe');
+
+}
+
+
+express : 4.16.4
+	aaa : 2.0.0
+	bbb : 3.1.1
+	zzz : 4.2.4
+
+^ -> 4.x.x
+4.1.1
+4.63.999
+
+~ -> 4.1.x
+
+"dependencies": {
+    "body-parser": "1.18.3",
+    "boostrap": "^2.0.0",
+    "express": "4.16.4",
+    "mongodb": "^3.2.2"
+  }
+  
+  "body-parser": "1.41.18"
