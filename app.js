@@ -141,6 +141,7 @@ app.get('/', function (req, res) {
 
 app.use(express.static('content'));
 app.use(express.static('node_modules/bootstrap/dist'));
+app.use(express.static('node_modules/jquery/dist'));
 
 app.listen(3000, function () {
     console.log('Server started at port 3000');

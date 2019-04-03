@@ -15,22 +15,31 @@ window.onload = function () {
 };
 
 function append_json(studentsArray) {
-    var table = document.getElementById('table-id');
-    table.innerHTML = '';
+    let table = document.getElementById('table-id');
 
-    var tbody = document.createElement('tbody');
+    for (let i = 1; i < table.rows.length; i++) {
+        table.deleteRow(i);
+    }
+
 
     studentsArray.forEach(function (student) {
 
-        var tr = document.createElement('tr');
-        tr.innerHTML = '<td>' + student._id + '</td>' +
-            '<td>' + student.firstName + '</td>' +
-            '<td>' + student.lastName + '</td>' +
-            '<td>' + student.major + '</td>' +
-            '<td>' + student.receivedDate + '</td>';
+        // var tr = document.createElement('tr');
+        // tr.innerHTML = '<td>' + student._id + '</td>' +
+        //     '<td>' + student.firstName + '</td>' +
+        //     '<td>' + student.lastName + '</td>' +
+        //     '<td>' + student.major + '</td>' +
+        //     '<td>' + student.receivedDate + '</td>';
+        //
+        // tbody.appendChild(tr);
 
-        tbody.appendChild(tr);
+        let row = table.insertRow(table.rows.length);
+        row.insertCell(0).innerText = student._id;
+        row.insertCell(1).innerText = student.firstName;
+        row.insertCell(2).innerText = student.lastName;
+        row.insertCell(3).innerText = student.major;
+        row.insertCell(4).innerText = student.receivedDate;
     });
-    table.appendChild(tbody);
+    // table.appendChild(tbody);
 
 }
