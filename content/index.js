@@ -4,12 +4,12 @@ window.onload = function () {
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
-            console.log(xhr.responseText);
             append_json(JSON.parse(xhr.response));
         }
     };
     xhr.open('GET', '/students/', true);
     xhr.send(null);
+
 
 
 };
@@ -39,6 +39,7 @@ function append_json(studentsArray) {
         row.insertCell(2).innerText = student.lastName;
         row.insertCell(3).innerText = student.major;
         row.insertCell(4).innerText = student.receivedDate;
+        row.insertCell(5).innerHTML = '<a href=/profiles/'+student._id+'>'+"Profile"+'</a>';
     });
     // table.appendChild(tbody);
 

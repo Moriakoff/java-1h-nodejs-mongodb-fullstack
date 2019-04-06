@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+    <script src="dist/jquery.js"></script>
+    <script src="dist/jquery.validate.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="student.js"></script>
+</head>
+
+
+<body>
+<div class="container">
+    <br>
+    <div class="card">
+        <h2 class="text-center card-header alert-success">
+            Students
+        </h2>
+
+        <div class="card-body">
+
+            <form>
+                <div class="form-group">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Lastname</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" class="form-control" id="birthday" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="university">university</label>
+                    <input type="text" id="university" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Start learning</label>
+                    <input type="date" id="year" class="form-control" required>
+                </div>
+
+                <div>
+                    <btn id="submit-btn" class="btn btn-success float-right" onclick="saveStudent()"> submit</btn>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
